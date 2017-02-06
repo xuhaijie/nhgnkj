@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<!--
+            __     __
+           /  \~~~/  \                                                                       |      金华激石信息技术有限公司      |
+     ,----(     ..    )
+    /      \__     __/
+   /|         (\  |(
+  ^ \   /___\  /\ |
+     |__|   |__|-"
+-->
+<html>
+<head>
+	<include file="Public:head" />
+</head>
+<body>
+<include file="Public:header" />
+	<div class="main">
+		<div class="search">
+			<div class="keywords">
+				<li>中电电气</li>
+				<li>友科太阳能</li>
+				<li>上海兆能</li>
+				<li>固德威</li>
+			</div>
+			<form id="form12" name="form1" method="get" action="__ROOT__/product/sousuo">
+				<i></i>
+				<input name="key" value="" placeholder="　请输入关键词" class="text">
+				<input type="submit" name="Submit" value="" class="anan" />
+			</form>
+		</div>
+	</div>
+<div class="clear2"></div>
+<div class="video">
+	<div class="main">
+		<div class="video1">
+			<iframe src='http://player.youku.com/embed/XMTQ1ODY4NzI0' frameborder=0 'allowfullscreen'></iframe>
+			<p>浙江影视科技频道的采访</p>
+		</div>
+		<div class="video2">
+			<iframe src='http://player.youku.com/embed/XMTQ1ODY4NzI0' frameborder=0 'allowfullscreen'></iframe>
+			<p>视频展示</p>
+		</div>
+	</div>
+</div>
+<div class="product">
+	<div class="main">
+		<div class="class">
+			<ul>
+				<volist name="type" id="vo"  >
+					<volist name="vo.son" id="vo1">
+						<li>
+							<i class="btn-i-1"></i>
+							<a href="__APP__/product/type/{$vo1.id}" class="btn-span-20"><span data-hover="{$vo1.name}">{$vo1.name}</span>
+								<i></i>
+							</a>
+						</li>
+					</volist>
+				</volist>
+			</ul>
+		</div>
+		<div class="product-pic">
+			<volist name="product" id="vo" offset="0" length="6">
+				<div class="picture">
+					<div class="picture1">
+						<a href="__APP__/product/{$vo.id}" target="_blank"><img src="__ROOT__/__UPLOAD__/im_{$vo.img}" alt="{$vo.title}" onload="AXImg(this,295,295)"/></a>
+					</div>
+					<div class="picture2">
+						<a href="__APP__/product/{$vo.id}" target="_blank">{$vo.title|mb_substr=0,20,'utf-8'}</a>
+					</div>
+				</div>
+			</volist>
+		</div>
+	</div>
+	<div class="clear2"></div>
+	<a href="product/type/6" class="more btn-span-14"><span>了解更多</span></a>
+</div>
+<div class="about">
+	<div class="main">
+		<p>{$intro['content']|msubstr=0,560,'utf-8',true}</p>
+	</div>
+	<a href="company" class="more btn-span-14-1"><span>了解更多</span></a>
+</div>
+<div class="youshi"></div>
+<div class="factory">
+	<div class="factory-dh"></div>
+	<div class="factory-nr">
+		<div id="demo" style=" width:100%; overflow:hidden;">
+			<table align=left cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td id="demo1" valign=top ><div style="width:1500px; ">
+						<volist name="factory" id="vo" offset="0" length="10">
+							<div class="pict">
+								<div class="pict1"> <a href="__APP__/product/{$vo.id}" target="_blank"><img src="__ROOT__/__UPLOAD__/in_{$vo.img}" alt="{$vo.title}" onload="AXImg(this,295,295)"/></a></div>
+								<div class="pict2"> <a href="__APP__/product/{$vo.id}" target="_blank">{$vo.title|mb_substr=0,20,'utf-8'}</a></div></div>
+						</volist></div>
+					</td>
+					<td id="demo2" valign=top></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<a href="product/type/27" class="more btn-span-14-2"><span>了解更多</span></a>
+</div>
+
+<div class="huodong">
+	<div class="main" style="width: 1070px;">
+		<volist name="huodong" id="vo" offset="0" length="4">
+			<div class="pict" style="width: 242px;height: 242px;margin-right: 20px;">
+				<div class="pict1" style="width: 242px;height: 242px;">
+					<a href="__APP__/product/{$vo.id}" target="_blank"><img src="__ROOT__/__UPLOAD__/in_{$vo.img}" alt="{$vo.title}" onload="AXImg(this,242,242)"/></a>
+				</div>
+			</div>
+		</volist>
+		<div class="clear2"></div>
+		<a href="product/type/33" class="more btn-span-14-3" style="margin-top: 20px;"><span>了解更多</span></a>
+	</div>
+</div>
+<div class="xiangmu">
+	<div class="xiangmu-dh">
+		<div class="main">
+			<a href="product/type/37" class="btn-span-20"><span data-hover="民用项目方案">民用项目方案</span></a>
+			<a href="product/type/38" class="btn-span-20"><span data-hover="商业项目方案">商业项目方案</span></a>
+		</div>
+	</div>
+	<div class="main">
+		<div class="xiangmu-nr">
+			<volist name="xiangmu" id="vo" offset="0" length="8">
+				<div class="picture" style="width:300px;height:300px;margin: 0;">
+						<div class="picture1" style="width:300px;height:300px;">
+							<a href="__APP__/product/{$vo.id}" target="_blank"><img src="__ROOT__/__UPLOAD__/in_{$vo.img}" alt="{$vo.title}" onload="AXImg(this,300,300)"/></a>
+						</div>
+						<div class="picture2">
+							<a href="__APP__/product/{$vo.id}" target="_blank" style="font-size: 16px;">{$vo.title|mb_substr=0,15,'utf-8'}...</a>
+						</div>
+				</div>
+			</volist>
+		</div>
+		<div class="clear2"></div>
+		<a href="product/type/33" class="more btn-span-14-4" style="margin-top: 20px;"><span>了解更多</span></a>
+	</div>
+</div>
+<div class="honor">
+	<div class="main">
+		<div class="honor-dh">
+			<p>{$config['tel']}</p>
+		</div>
+		<div class="case_nr">
+			<div class="bodyCon08"><!--学员-->
+				<div class="students">
+					<div id="four_flash">
+						<div class="flashBg">
+							<ul class="mobile">
+								<volist name="xiangmu1" id="vo" offset="0" length="5">
+									<li>
+										<div class="picc">
+											<div class="picc1"><a href="__APP__/product/{$vo.id}" target="_blank"><img src="__ROOT__/__UPLOAD__/in_{$vo.img}" alt="{$vo.title}" onload="AXImg(this,202,202)"/></a></div>
+										</div>
+									</li>
+								</volist>
+							</ul>
+						</div>
+						<div class="but_right"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="main">
+	<div class="industry">
+		<div class="industry-dh dh"><a href="news/type/34">更多+</a></div>
+		<div class="industry-nr">
+			<volist name="industry" id="vo" offset="0" length="7">
+				<li><a href="__APP__/news/{$vo.id}">
+					<p >{$vo.title}</p>
+				</a> </li>
+			</volist>
+		</div>
+	</div>
+	<div class="company">
+		<div class="company-dh dh"><a href="news/type/39">更多+</a></div>
+		<div class="company-nr">
+			<img src="../Public/images/news-img.jpg" alt="新闻图片">
+			<volist name="company" id="vo" offset="0" length="2">
+				<li><a href="__APP__/news/{$vo.id}">
+					<p>{$vo.title}</p>
+				</a> </li>
+			</volist>
+		</div>
+	</div>
+	<div class="liuyan">
+		<div class="liuyan-dh dh"></div>
+		<form action="__ROOT__/message/add_message" method="POST" id="form1">
+			<table class="order" style="margin-left: 0;margin-bottom: 0;margin-top: 0;">
+				<tr>
+					<td><input name="name" type="text" id="name" placeholder="姓名：" style="width: 395px;height: 31px;margin-bottom:5px;"></td>
+				</tr>
+				<tr>
+					<td><input name="tel" type="text" id="tel"placeholder="电话：" style="width: 395px;height: 31px;margin-bottom:5px;" ></td>
+				</tr>
+				<tr>
+					<td><input name="email" type="text" id="email"placeholder="邮箱：" style="width: 395px;height: 31px;margin-bottom:5px;"  ></td>
+				</tr>
+				<tr>
+					<td><textarea name="content" id="content" cols="90" rows="4" placeholder="留言：" style="width: 395px;margin-bottom:5px;"></textarea></td>
+				</tr>
+				<tr>
+
+					<td><span style="margin-right: 10px;">验证码：</span>
+						<input type="text" id="captcha" name="captcha" maxlength="4" autocomplete="off" style="width:60px;height:18px;">&ensp;
+						<img src="__ROOT__/Base/verify" alt="" title="点击更换验证码" onclick="this.src='__ROOT__/Base/verify?t='+Math.random();"><input id="submit" type="submit" value="&emsp;"   class="tijiao" style="margin-left: 15px;">
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+
+<div class="clear2"></div>
+<include file="Public:footer" />
+</body>
+</html>
+<script language="javascript">
+	var speed=30;
+	var demo=document.getElementById('demo');
+	var demo1=document.getElementById('demo1');
+	var demo2=document.getElementById('demo2');
+	demo2.innerHTML=demo1.innerHTML;
+	function Marquee(){
+		if(demo2.offsetWidth-demo.scrollLeft<=0)
+		{
+			demo.scrollLeft-=demo1.offsetWidth;
+		}
+		else
+		{demo.scrollLeft++;}
+	}
+	var MyMar=setInterval(Marquee,speed);
+	demo.onmouseover=function(){
+		clearInterval(MyMar)
+	}
+	demo.onmouseout=function(){
+		MyMar=setInterval(Marquee,speed)
+	}
+</script>
+
+<script type="text/javascript">
+	//学员
+	var _index5=0;
+	$("#four_flash .but_right").click(function(){
+		_index5++;
+		var len=$(".flashBg ul.mobile li").length;
+		if(_index5+5>len){
+			$("#four_flash .flashBg ul.mobile").stop().append($("ul.mobile").html());
+		}
+		$("#four_flash .flashBg ul.mobile").stop().animate({left:-_index5*212},1000);
+	});
+</script>
